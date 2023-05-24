@@ -1,0 +1,263 @@
+body{
+    margin: 0;
+    min-width: 300px;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#cuerpo{
+    display: flex;
+    width: 90%;
+    padding-left: 8%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: justify;
+    justify-content: space-between;
+    line-height: 1.7;
+    font-size: 18px;
+}
+.contenido{
+    width: 75%;
+    border-radius: 3px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+}
+
+#inicio, #evolucion, #marcas, #diseñadores, #moda{
+    margin: 50px 100px;
+}
+
+#moda{
+    float: left;
+}
+#navegacion{
+    background-color: rgb(255, 255, 255);
+    width: 100%; 
+    justify-content: space-between;
+    display: flex; 
+    border-bottom: 1px solid #b1b1b1;  
+}
+#brand{
+    font-size: 20px;
+    padding: 0 18px;
+    color: rgb(0, 0, 0);
+    float: left;
+    user-select: none;
+    align-items: center;
+    display: flex;
+}
+#navegacion ol{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+#navegacion ol li{
+    display: block;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+}
+#navegacion ol li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 15px 18px;   
+    display: table;   
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "GT Walsheim Pro"; 
+}
+#navegacion ol li a:hover{
+    color:rgb(209, 0, 0);
+    
+}
+.encabezado{
+    background-image: url(img/portada.jpg);
+    width: 100%;
+    height: 360px;
+    min-width: 900px;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    display: flex;
+}
+
+table{
+    border-collapse: collapse;
+}
+td, th {
+    border: black 1px solid;
+    padding:0.2em 0.4em;
+}
+h1{
+    text-align: left;
+    padding-top: 15px;
+}
+
+#container {
+    display: block;
+    margin: auto 180px auto auto;
+    width: 100%;
+    color: #4e4e4e;
+    background: #ecf0f5;
+}
+.galeria{
+    display: flex;
+    width: 100%;
+    margin: auto;   
+    justify-content: space-around;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.foto{
+    width: 200px;
+    height: 400px;
+    margin: 5px;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.foto img{
+    width: 200px;
+    height: 400px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.foto:hover  {
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+#pie{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(45, 46, 47);
+    text-align: center;
+    align-content: center;
+    padding-top: 8px;
+    color: #fcfcfc;
+    float: none;
+    clear: both;   
+}    
+.contenedor-modal.active {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.contenedor-modal.active img {
+	z-index: 3;
+	width: 400px;
+	height: 600px;
+}
+
+.contenedor-modal.active::after {
+	position: fixed;
+	content: '';
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(211, 211, 211, 0.459);
+}
+img{
+    max-width: 100%;
+    height: auto;    
+}
+#responsive{
+    display: none;
+}
+
+    @media only screen and (min-width: 760px){
+        figure{
+            max-width: 30%;
+            margin: 0 30px 10px 0;
+            float: left;
+        }
+        
+    }
+
+    @media only screen and (max-width: 760px){
+        #inicio, #evolucion, #marcas, #diseñadores, #moda{
+            margin: 10px 20px;
+        }        
+        .contenido {
+            width: 90%;
+        }
+        #navegacion{
+            display: none;
+        }
+        #subseccion1 { 
+            position: absolute;
+            top: 100%;
+            left: -30px;
+            
+            list-style-type: none;
+            display: none;
+            padding: 0;
+       }
+       ul {
+        margin: 0;
+        }
+       #seccion { 
+           margin: 0px 5px;
+           padding:15px 18px; 
+           
+           float: left;
+           list-style-type: none;
+           position: relative; 
+         }
+         #seccion li {
+            padding: 15px 2px;
+            border-bottom: 1px solid #b1b1b1;
+        }
+        #responsive{
+            background-color: rgb(255, 255, 255);
+            width: 100%; 
+            justify-content: space-between;
+            display: flex; 
+            border-bottom: 1px solid #b1b1b1; 
+        }
+        
+        
+        #subseccion1 li :hover{
+            color: rgb(201, 0, 0);
+        }
+        
+        #responsive ul li a{
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: "GT Walsheim Pro"; 
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 16px 18px;
+        }
+        
+    }
+   @media only screen and (max-width: 580px) {
+        
+        .contenido {
+            width: 90%;
+        }
+        .contenedor-modal.active img {
+            z-index: 3;
+            width: 280px;
+            height: 470px;
+        }
+        .foto img{
+    width: 200px;
+    height: 400px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+        
+    }
